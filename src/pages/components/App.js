@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, BrowserRouter} from "react-router-dom";
 import Card from './Card';
 import SwipeButtons from './SwipeButtons';
 import ChatPage from './ChatPage';
@@ -80,6 +80,7 @@ function App() {
   
   return (
     <div className="App">
+    <BrowserRouter>
     <AppContext.Provider 
       value={{
         user, 
@@ -120,6 +121,7 @@ function App() {
           </Route>
       </Switch>
       </AppContext.Provider>
+      </BrowserRouter>
     </div>
   );
 }

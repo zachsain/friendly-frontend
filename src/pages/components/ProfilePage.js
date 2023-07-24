@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import styles from './ProfilePage.modules.css'
+import styles from './ProfilePage.module.css'
 
 
 
@@ -10,10 +10,8 @@ function ProfilePage() {
     const { id } = useParams()
     const history = useHistory()
 
-    console.log(id)
-
     useEffect(() => {
-        fetch(`/profiles/${id}`)
+        fetch(`http://localhost:3000/profiles/${id}`)
         .then((r) => r.json())
         .then((p) => {
             setProfile(p);
@@ -21,7 +19,7 @@ function ProfilePage() {
         .catch((error) => {
         console.log('An error occurred:', error);
   });
-    }, [])
+    }, [id])
 
     function calculateAge(dateOfBirth) {
         const dob = new Date(dateOfBirth);
@@ -44,7 +42,7 @@ function ProfilePage() {
     <div>
         <div onClick={handleClick} className={styles.userProfile}>
             <div className={styles.userProfile__image-container}>
-            <img className={styles.userProfile__image} src={profile.featured_image.url} alt="profile-photo" />
+            <imgage className={styles.userProfile__image} src={profile.featured_image.url} alt="profile-photo" />
             <h1 className={styles.userProfile__h1}>{profile.first_name}, {age} </h1>
             </div>
             <p className={styles.userProfile__p}>{profile.bio}</p>

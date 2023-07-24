@@ -3,7 +3,7 @@ import AppContext from './AppContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useHistory} from "react-router-dom";
-import styles from './SignupForm.modules.css'
+import styles from './SignupForm.module.css'
 
 function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfile}) {
 
@@ -36,7 +36,7 @@ function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfi
     formData.append("dob", dob);
     formData.append("featured_image", image);
 
-    fetch('/signup', {
+    fetch('http://localhost:3000/signup', {
       method: 'POST',
       body: formData
     }).then((r) => {
@@ -116,9 +116,9 @@ function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfi
           onChange={(event) => setBio(event.target.value)}
           className={styles.signup-input}
         />
-        <label htmlFor="gender">Gender:</label>
+        <label className={styles.label} htmlFor="gender">Gender:</label>
         {/* id question? */}
-          <select id="gender" name="gender" value={gender} onChange={handleGenderChange}> 
+          <select className={styles.select} id="gender" name="gender" value={gender} onChange={handleGenderChange}> 
           <option value="">Select Gender</option>
           {genderOptions.map((option) => (
             <option key={option} value={option}>{option}</option>

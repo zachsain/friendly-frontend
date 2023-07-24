@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import ProfileEditForm from './ProfileEditForm';
 import Settings from './Settings';
 // import styles from './Settings.modules.css'
-import styles from './UserProfile.modules.css'
+import styles from './UserProfile.module.css'
 
 
 function UserProfile() {
@@ -35,14 +35,11 @@ function UserProfile() {
       setShowLogout(false)
     }
 
-    function handleClick(){
-      console.log('hi')
-    }
     return (
       <div>
         <div onClick={handleEditClick} className={styles.userProfile}>
         <div className={styles.userProfile__image-container}>
-          <img className={styles.userProfile__image} src={user.profile.featured_image.url} alt="profile-photo" />
+          <imgage className={styles.userProfile__image} src={user.profile.featured_image.url} alt="profile-photo" />
           <h1 className={styles.userProfile__h1}>{user.profile.first_name}, {age}</h1>
         </div>
         <p className={styles.userProfile__p}>{user.profile.bio}</p>

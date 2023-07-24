@@ -11,7 +11,7 @@ import AppContext from './AppContext';
 import ProfilePage from './ProfilePage';
 import {InfinitySpin} from 'react-loader-spinner';
 
-function Home() {
+function RenderApp() {
   const [user, setUser] = useState(null)
   const [matches, setMatches] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -37,7 +37,7 @@ function Home() {
   // } , [chatPageRender]);
 
   useEffect(() => {
-    fetch("/me")
+    fetch("http://localhost:3000/me")
       .then((r) => {
         if (r.ok) {
           r.json().then((user) => {
@@ -132,5 +132,5 @@ function Home() {
 }
 
 
-export default Home;
+export default RenderApp;
 

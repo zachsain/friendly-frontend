@@ -5,7 +5,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SwipeButtons from './SwipeButtons';
 import { Link } from 'react-router-dom'
-import styles from './Card.modules.css'
+import styles from './Card.module.css'
+
 import {InfinitySpin, Rings} from 'react-loader-spinner';
 
 
@@ -21,7 +22,7 @@ function Card() {
 
 
   useEffect(() => {
-    fetch('/profiles')
+    fetch('http://localhost:3000/profiles')
       .then((r) => r.json())
       .then((p) => (setProfiles(p), setNumberOfSwipes(p.length)));
       
@@ -41,7 +42,7 @@ function Card() {
     tinderCardRef.current.swipe('right');
     let amount = numberOfSwipes - 1
     setNumberOfSwipes(amount)
-    fetch("/swipes", {
+    fetch("http://localhost:3000/swipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +76,7 @@ function Card() {
     tinderCardRef.current.swipe('left');
     let amount = numberOfSwipes - 1
     setNumberOfSwipes(amount)
-    fetch("/swipes", {
+    fetch("http://localhost:3000/swipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +114,7 @@ function Card() {
             <div className={styles.tinder__card}>
               <div className={styles.displayCard}>
                 <div className={styles.displayCard__image-container}>
-                  <img 
+                  <imgage
                     className={styles.tinder__card_img}
                     src={p.featured_image.url} 
                     alt="profile-photo" 
@@ -157,7 +158,7 @@ function Card() {
                     speed={.05}
                   />
                 </div>
-                <h2 className={styles.loading-spinner-h1}>we're looking for more people...</h2>
+                <h2 className={styles.loading-spinner-h1}>We are looking for more people...</h2>
               </div>
             </div>
           </div>

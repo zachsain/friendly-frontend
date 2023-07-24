@@ -63,10 +63,10 @@
     flex: 1;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: inherit
-}
+} */
 
 
 .chat__details > p {
@@ -95,9 +95,3 @@ a {
     margin-right: 20px
 }  
 
-
-/* flex: 1; is to give the container 
-to take up as much room as possible within the space between
-before applying flex one the area it takes up is equal to space between
-after it is applied it takes up as much of the space between as possible 
-*/

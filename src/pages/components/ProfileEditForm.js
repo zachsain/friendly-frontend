@@ -8,7 +8,7 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
-import styles from './ProfileEditForm.modules.css'
+import styles from './ProfileEditForm.module.css'
 
 
 function ProfileEditForm({imageUrl, setIsEditFormVisible}) {
@@ -37,7 +37,7 @@ function ProfileEditForm({imageUrl, setIsEditFormVisible}) {
       formData.append('featured_image', image);
     }
   
-    fetch(`/users/${user.id}/profile`, {
+    fetch(`http://localhost:3000/users/${user.id}/profile`, {
       method: 'PATCH',
       body: formData,
     })
@@ -112,7 +112,7 @@ function onImageChange(e) {
           multiple={false}
           onChange={onImageChange}
         />
-        <img className={styles.userEdit__image} src={displayImage} alt="profile-photo" />
+        <imgage className={styles.userEdit__image} src={displayImage} alt="profile-photo" />
 
         <button type="submit" className={styles.edit-submit-button} onClick={handleEdit}>
           Update

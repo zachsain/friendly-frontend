@@ -2,7 +2,7 @@ import React,{ useState, useContext, useEffect, useRef} from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 import { Avatar } from '@mui/material'
 import AppContext from './AppContext';
-import styles from './ChatScreen.modules.css'
+import styles from './ChatScreen.module.css'
 
 
 function ChatScreen() {
@@ -54,7 +54,7 @@ function ChatScreen() {
         e.preventDefault()
         console.log(e.target.value)
         console.log(messageContent)
-        fetch("/messages", {
+        fetch("http://localhost:3000/messages", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -103,7 +103,7 @@ function ChatScreen() {
         </div>}
         { profile && msgObj.map((m) => (
             m.sender_id === parseInt(id) ? (  
-                <div className={styles.chatScreen__message}> 
+                <div className={styles.chatScreen__message} key={m.id}> 
                     <Avatar
                         key={m.id}
                         onClick={handleProfileClick}
@@ -115,7 +115,7 @@ function ChatScreen() {
                 </div>) 
             : 
             ( 
-                <div className={styles.chatScreen__message}> 
+                <div className={styles.chatScreen__message} key={m.id}> 
                     <p className={styles.chatScreen__textUser}>{m.content}</p>
                 </div>
             )

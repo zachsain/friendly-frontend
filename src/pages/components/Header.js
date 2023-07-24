@@ -7,7 +7,7 @@ import { IconButton, Badge } from '@mui/material';
 import {Link, useHistory } from "react-router-dom";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import SettingsIcon from '@mui/icons-material/Settings';
-import styles from './Header.modules.css'
+import styles from './Header.module.css'
 
 
 
@@ -38,7 +38,7 @@ function Header( ) {
 
     setUnopenedMatchesCount(matchCount)
     } 
-  }, [user.messages, user.matches, chatPageRender])
+  }, [user.messages, user.matches, user.id, chatPageRender]) // user.id ?
 
   console.log(unopenedMatchesCount)
   console.log(unopenedMessagesCount)
@@ -69,7 +69,7 @@ function Header( ) {
         
 
         <Link to="/">
-          <img 
+          <imgage
               className={styles.header__logo}
               src="https://i.imgur.com/8H6MxYS.png"
               // src="https://www.canva.com/design/DAFkhcTlSoU/UXZyJ7Cpy0cDVjYYAUf3_Q/view?utm_content=DAFkhcTlSoU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" 

@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import AppContext from './AppContext'
 import LogoutIcon from '@mui/icons-material/Logout';
 import { IconButton } from '@mui/material';
-import styles from './Settings.modules.css'
+import styles from './Settings.module.css'
 
 function Settings() {
     const {user, 
@@ -18,7 +18,7 @@ function Settings() {
 
     function handleLogout(e){
         e.preventDefault();        
-        fetch("/logout", { method: "DELETE" }).then((r) => {
+        fetch("http://localhost:3000/logout", { method: "DELETE" }).then((r) => {
             if (r.ok) {
               console.log("good bye")
               setUser(null)

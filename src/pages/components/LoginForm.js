@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import AppContext from './AppContext';
 import { useHistory } from "react-router-dom";
-import styles from './LoginForm.modules.css'
+import styles from './LoginForm.module.css'
 
 
 function LoginForm({ setUser, setLoginOrSignup, setShowLogout, setChatPageRender, setIsLoggedIn, setIsOnUserProfile }) {
@@ -14,7 +14,7 @@ function LoginForm({ setUser, setLoginOrSignup, setShowLogout, setChatPageRender
   
     function handleLogin(e) {
       e.preventDefault();
-      fetch("/login", {
+      fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

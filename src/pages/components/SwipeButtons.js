@@ -2,7 +2,7 @@ import React from 'react'
 // import './SwipeButtons.css'
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import styles from './Card.modules.css'
+import styles from './Card.module.css'
 
 import { IconButton }  from '@mui/material';
 

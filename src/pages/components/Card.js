@@ -5,10 +5,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SwipeButtons from './SwipeButtons';
 import { Link } from 'react-router-dom'
-import './Card.css';
-import './DisplayCard.css';
-import './SwipeButtons.css'
+import styles from './Card.modules.css'
+// import styles from './Card.module.css'
+// import './DisplayCard.css';
+// import './SwipeButtons.css'
 import {InfinitySpin, Rings} from 'react-loader-spinner';
+
 
 function Card() {
   const [profiles, setProfiles] = useState([]);

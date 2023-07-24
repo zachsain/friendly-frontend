@@ -2,7 +2,8 @@ import React, {useContext, useState} from 'react'
 import AppContext from './AppContext';
 import { Avatar } from '@mui/material'
 import { Link } from 'react-router-dom'
-import "./ChatBox.css"
+import styles from './ChatBox.modules.css'
+
 
 function Chat({
                 name, 

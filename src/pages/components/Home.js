@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import Header from './Header';
 import { Switch, Route, BrowserRouter} from "react-router-dom";
 import Card from './Card';
@@ -72,15 +71,16 @@ function App() {
   //   );
   // }
 
-  if (!user) return (
-    <div>
-        <Login setShowLogout={setShowLogout} setIsOnUserProfile={setIsOnUserProfile} setIsLoggedIn={setIsLoggedIn} setChatPageRender={setChatPageRender} setUser={setUser} />
-    </div>)
+  // if (!user) return (
+  //   <div>
+  //       <Login setShowLogout={setShowLogout} setIsOnUserProfile={setIsOnUserProfile} setIsLoggedIn={setIsLoggedIn} setChatPageRender={setChatPageRender} setUser={setUser} />
+  //   </div>)
 
   
   return (
     <div className="App">
-    <BrowserRouter>
+      hi 
+    {/* <BrowserRouter>
     <AppContext.Provider 
       value={{
         user, 
@@ -95,8 +95,8 @@ function App() {
         setIsOnUserProfile,
         showLogout,
         setShowLogout
-      }}>
-    <Header /> 
+      }}> */}
+    {/* <Header /> 
       <Switch>
       <Route path = "/chat/:id">
           <ChatScreen />
@@ -121,7 +121,7 @@ function App() {
           </Route>
       </Switch>
       </AppContext.Provider>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

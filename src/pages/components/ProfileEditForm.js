@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import AppContext from './AppContext';
 import {useHistory} from "react-router-dom";
-import './ProfileEditForm.css'
 import { imageListClasses } from '@mui/material';
 import CloseFullscreenRoundedIcon from '@mui/icons-material/CloseFullscreenRounded';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -9,6 +8,7 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
+import styles from './ProfileEditForm.modules.css'
 
 
 function ProfileEditForm({imageUrl, setIsEditFormVisible}) {

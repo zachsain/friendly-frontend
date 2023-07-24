@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
-import "./ChatPage.css";
+// import "./ChatPage.css";
+import styles from './ChatPage.modules.css'
+
 import AppContext from './AppContext';
 import ChatBox from './ChatBox';
 

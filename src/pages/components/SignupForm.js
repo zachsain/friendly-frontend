@@ -3,7 +3,7 @@ import AppContext from './AppContext';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {useHistory} from "react-router-dom";
-import './SignupForm.css';
+import styles from './SignupForm.modules.css'
 
 function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfile}) {
 

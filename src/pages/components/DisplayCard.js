@@ -5,7 +5,8 @@ import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { IconButton } from '@mui/material';
 import Modal from 'react-modal';
 import ProfileEditForm from './ProfileEditForm';
-import './DisplayCard.css';
+import styles from './DisplayCard.modules.css'
+
 // import './Cards.css';
 
 

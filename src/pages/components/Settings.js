@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import AppContext from './AppContext'
 import LogoutIcon from '@mui/icons-material/Logout';
 import { IconButton } from '@mui/material';
-import './Settings.css'
+import styles from './Settings.modules.css'
 
 function Settings() {
     const {user, 

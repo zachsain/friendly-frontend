@@ -1,0 +1,200 @@
+.card {
+    position: relative;
+    width: 500px; 
+    height: 600px; 
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .card > h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tinderCards__cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 20px;
+  }
+  
+  .swipe {
+    position: absolute;
+  }
+  
+  /* Optional: Add additional styling to enhance the card appearance */
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+  }
+  
+  .card:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .card-overlay-text {
+    color: white;
+    font-size: 20px;
+    margin-top: 30%;
+  }
+
+  .loading-spinner-container {
+    padding-top: 50px;
+  }
+  
+  
+  .loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+/* .swipeButtons-conatiner{
+    margin-top: 60xx;
+  } */
+  
+
+/* Displacy Card CSS */
+.loading-spinner-h1{
+    font-family: vidaloka;
+    
+}
+
+.loaded.tinder {
+  opacity: 1;
+}
+
+.tinder--cards{
+  flex-grow: 1;
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-end; */
+  z-index: 1;
+}
+
+.tinder--status i {
+  font-size: 100px;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+}
+
+.tinder--card {
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+  will-change: transform;
+  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease;
+}
+
+.moving.tinder--card {
+  transition: none;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.tinder--card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tinder--card .displayCard__image-container {
+  position: relative;
+  width: 400px;
+  height: 460px;
+  padding-bottom: 0;
+}
+
+
+.tinder--card .tinder--card-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 435px;
+  object-fit: cover;
+  border-radius: 20px;
+  padding-bottom: 12px;
+  
+}
+
+.tinder--card .dislpayCard__h1 {
+  position: absolute;
+  bottom: 25px;
+  left: 20%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* Swipe Buttons CSS */
+
+.swipeButtons {
+  position: fixed;
+  bottom: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.swipeButtons button {
+  border: none;
+  background-color: white;
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 50%; /* Add this property to make the buttons circular */
+  padding: 11px; /* Adjust the padding as desired */
+}
+
+.swipeButtons__left {
+  color: #ec5e6f !important;
+  cursor: pointer;
+}
+
+.swipeButtons__right {
+  color: #29ABE2 !important;
+  cursor: pointer;
+} 
+
+

@@ -7,7 +7,8 @@ import { IconButton, Badge } from '@mui/material';
 import {Link, useHistory } from "react-router-dom";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import SettingsIcon from '@mui/icons-material/Settings';
-import "./Header.css"
+import styles from './Header.modules.css'
+
 
 
 function Header( ) {

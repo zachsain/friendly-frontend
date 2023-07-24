@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
-import './Login.css'
+import styles from './Login.modules.css'
 
 function Login({ setUser, setChatPageRender, setIsLoggedIn, setIsOnUserProfile, setShowLogout }) {
     const [loginOrSignup, setLoginOrSignup] = useState(true)

@@ -1,6 +1,4 @@
-
-
-  .loaded.tinder {
+  /* .loaded.tinder {
     opacity: 1;
   }
   
@@ -10,7 +8,6 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    /* align-items: flex-end; */
     z-index: 1;
 }
 
@@ -86,4 +83,4 @@
     background-color: rgba(0, 0, 0, 0.7);
     padding: 5px 10px;
     border-radius: 10px;
-  }
+  } */

@@ -1,6 +1,7 @@
 import React, { useEffect, useState }  from 'react'
 import Signup from "./SignupForm";
-import './SignupForm.css'
+import styles from './SignupForm.modules.css'
+
 
 function CreateProfile() {
 

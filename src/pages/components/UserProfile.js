@@ -6,8 +6,8 @@ import { IconButton } from '@mui/material';
 import Modal from 'react-modal';
 import ProfileEditForm from './ProfileEditForm';
 import Settings from './Settings';
-import './UserProfile.css';
-import './Settings.css'
+import styles from './Settings.modules.css'
+import styles from './UserProfile.modules.css'
 
 
 function UserProfile() {

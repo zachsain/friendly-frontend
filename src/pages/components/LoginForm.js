@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import AppContext from './AppContext';
 import { useHistory } from "react-router-dom";
-import './LoginForm.css'
+import styles from './LoginForm.modules.css'
+
 
 function LoginForm({ setUser, setLoginOrSignup, setShowLogout, setChatPageRender, setIsLoggedIn, setIsOnUserProfile }) {
 

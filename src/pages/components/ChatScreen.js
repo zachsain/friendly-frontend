@@ -2,7 +2,8 @@ import React,{ useState, useContext, useEffect, useRef} from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 import { Avatar } from '@mui/material'
 import AppContext from './AppContext';
-import "./ChatScreen.css"
+import styles from './ChatScreen.modules.css'
+
 
 function ChatScreen() {
 

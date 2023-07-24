@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import './ProfilePage.css';
+import styles from './ProfilePage.modules.css'
+
 
 
 function ProfilePage() {

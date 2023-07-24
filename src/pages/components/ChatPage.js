@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-// import "./ChatPage.css";
 import styles from './ChatPage.modules.css'
 
 import AppContext from './AppContext';
@@ -135,7 +134,7 @@ function ChatPage() {
     );
   });
 
-  return <div className="chats">{box}</div>;
+  return <div className={styles.chats}>{box}</div>;
 }
 
 export default ChatPage;

@@ -7,8 +7,6 @@ import Modal from 'react-modal';
 import ProfileEditForm from './ProfileEditForm';
 import styles from './DisplayCard.modules.css'
 
-// import './Cards.css';
-
 
 function DisplayCard({name, dob, image, currentIndex, cardIndex, swipeContainerRef}) {
     const { user } = useContext(AppContext);
@@ -16,15 +14,15 @@ function DisplayCard({name, dob, image, currentIndex, cardIndex, swipeContainerR
 
 
     return (
-        <div className="tinder--card" >
-          <div onClick={handleEditClick} className="displayCard">
+        <div >
+          {/* <div onClick={handleEditClick} className="displayCard">
             <div className="displayCard__image-container">
               <img className="tinder--card-img" src={image} alt="profile-photo" />
               <h1 className="dislpayCard__h1">
                 {name}, {age}
               </h1>
             </div>
-          </div>
+          </div> */}
         </div>
       );
     

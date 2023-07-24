@@ -42,12 +42,12 @@ function ProfilePage() {
     const age = calculateAge(profile.dob);
   return (
     <div>
-        <div onClick={handleClick} className="userProfile">
-            <div className="userProfile__image-container">
-            <img className="userProfile__image" src={profile.featured_image.url} alt="profile-photo" />
-            <h1 className="userProfile__h1">{profile.first_name}, {age} </h1>
+        <div onClick={handleClick} className={styles.userProfile}>
+            <div className={styles.userProfile__image-container}>
+            <img className={styles.userProfile__image} src={profile.featured_image.url} alt="profile-photo" />
+            <h1 className={styles.userProfile__h1}>{profile.first_name}, {age} </h1>
             </div>
-            <p className="userProfile__p">{profile.bio}</p>
+            <p className={styles.userProfile__p}>{profile.bio}</p>
         </div>
 
     </div>

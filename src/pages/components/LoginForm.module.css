@@ -47,3 +47,9 @@
     background-color: #0077b6;
   }
   
+
+  .login-error {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+  }

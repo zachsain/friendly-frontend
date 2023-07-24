@@ -74,10 +74,10 @@ function onImageChange(e) {
   }
 }
   return (
-    <div className="edit-form-container">
-        <form className="edit-form" >
+    <div className={styles.edit-form-container}>
+        <form className={styles.edit-form} >
 
-          <IconButton className="back-button-icon" onClick={() => setIsEditFormVisible(false)}>
+          <IconButton className={styles.back-button-icon} onClick={() => setIsEditFormVisible(false)}>
             <ArrowBackOutlinedIcon />
           </IconButton>
 
@@ -87,37 +87,37 @@ function onImageChange(e) {
           placeholder="First Name"
           value={firstName}
           onChange={(event) => setFirstName(event.target.value)}
-          className="edit-input"
+          className={styles.edit-input}
         />
         <input
           type="text"
           placeholder="Last Name"
           value={lastName}
           onChange={(event) => setLastName(event.target.value)}
-          className="edit-input"
+          className={styles.edit-input}
         />
         <textarea
           placeholder="Bio"
           value={bio}
           onChange={(event) => setBio(event.target.value)}
-          className="edit-input"
-          id="bio"
+          className={styles.edit-input}
+          id={styles.bio}
         ></textarea>
 
         {/* <input className="image-field" type="file" accept="image/*" multiple={false} onChange={onImageChange} /> */}
         <input
-          className="image-field"
+          className={styles.image-field}
           type="file"
           accept="image/*"
           multiple={false}
           onChange={onImageChange}
         />
-        <img className="userEdit__image" src={displayImage} alt="profile-photo" />
+        <img className={styles.userEdit__image} src={displayImage} alt="profile-photo" />
 
-        <button type="submit" className="edit-submit-button" onClick={handleEdit}>
+        <button type="submit" className={styles.edit-submit-button} onClick={handleEdit}>
           Update
         </button>
-        {errors && <p className="signup-error">{errors}</p>}
+        {errors && <p className={styles.signup-error}>{errors}</p>}
       </form>
     </div>
   )

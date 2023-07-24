@@ -89,48 +89,48 @@ function ChatScreen() {
     if (!isLoaded || !matches) return <h1>Loading...</h1>;
 
   return (
-    <div className="chatScreen" ref={chatBoxRef}>
-        <div className="chatScreen--chatContainer">
-        <p className="chatScreen__timestamp"> YOU MATCHED WITH {firstName} ON {formattedDate}</p>
+    <div className={styles.chatScreen} ref={chatBoxRef}>
+        <div className={styles.chatScreen__chatContainer}>
+        <p className={styles.chatScreen__timestamp}> YOU MATCHED WITH {firstName} ON {formattedDate}</p>
         { profile && 
-        <div className="chatScreen__image-container"> 
+        <div className={styles.chatScreen__image-container}> 
         <Avatar 
             onClick={handleProfileClick} 
-            className="chat__image__link" 
+            className={styles.chat__image__link} 
             alt={firstName} 
             src={profile.profile.featured_image.url} 
         />
         </div>}
         { profile && msgObj.map((m) => (
             m.sender_id === parseInt(id) ? (  
-                <div className="chatScreen__message"> 
+                <div className={styles.chatScreen__message}> 
                     <Avatar
                         key={m.id}
                         onClick={handleProfileClick}
-                        className="chat__image__msg" 
+                        className={styles.chat__image__msg}
                         alt={m.name} 
                         src={profile.profile.featured_image.url} 
                     />
-                    <p className="chatScreen__text">{m.content}</p>
+                    <p className={styles.chatScreen__text}>{m.content}</p>
                 </div>) 
             : 
             ( 
-                <div className="chatScreen__message"> 
-                    <p className="chatScreen__textUser">{m.content}</p>
+                <div className={styles.chatScreen__message}> 
+                    <p className={styles.chatScreen__textUser}>{m.content}</p>
                 </div>
             )
           
         ))}
         </div>
-        <form className="chatScreen__input">
+        <form className={styles.chatScreen__input}>
             <input 
-                className="chatScreen__inputField" 
+                className={styles.chatScreen__inputField} 
                 value={messageContent}  
                 onChange={(event) => setMessageContent(event.target.value)}
                 type="text" 
                 placeholder="Type a message"
             />
-            <button onClick={handleSendMessage} className="chatSreen__inputButton">SEND</button>
+            <button onClick={handleSendMessage} className={styles.chatSreen__inputButton}>SEND</button>
         </form>
     </div>
   )

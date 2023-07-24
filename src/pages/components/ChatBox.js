@@ -82,19 +82,17 @@ function Chat({
 
   return (
     <Link to={`/chat/${id}`}>
-    {/* <div className="chat"> */}
-    <div onClick={handleOpen} className={chatBoxClassName}>
-        <Avatar className="chat__image" alt={name} src={profilePic} />
-        <div className="chat__details">
+    <div onClick={handleOpen} className={styles.chatBoxClassName}>
+        <Avatar className={styles.chat__image} alt={name} src={profilePic} />
+        <div className={styles.chat__details}>
             <h2>{name}</h2>
             {message ? (
              <p>{message}</p>
           ) : (
-            <p id="chat__noMessage" > Say Hello 👋  </p>
-            // <span className="handshake-emoji">🤝</span>
+            <p id={styles.chat__noMessage} > Say Hello 👋  </p>
           )}
         </div>
-        <p className="chat__timestamp"> {timestamp} </p>
+        <p className={styles.chat__timestamp}> {timestamp} </p>
     </div>
     </Link>
   )

@@ -39,31 +39,31 @@ function LoginForm({ setUser, setLoginOrSignup, setShowLogout, setChatPageRender
   }
 
   return (
-  <div className="login-container">
-    <form className="login-form">
-        <h2 className="login-heading">Login</h2>
+  <div className={styles.login-container}>
+    <form className={styles.login-form}>
+        <h2 className={styles.login-heading}>Login</h2>
         <input
         type="email"
         placeholder="Username"
         value={username}
         onChange={(event) => setUsername(event.target.value)}
-        className="login-input"
+        className={styles.login-input}
         />
         <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(event) => setPassword(event.target.value)}
-        className="login-input"
+        className={styles.login-input}
         />
-        <button onClick={handleLogin} type="submit" className="login-button">
+        <button onClick={handleLogin} type="submit" className={styles.login-button}>
         Log in
         </button>
         <h4>Already have an account?</h4>
-        <button onClick={() => setLoginOrSignup(false)} type="submit" className="signup-button">
+        <button onClick={() => setLoginOrSignup(false)} type="submit" className={styles.signup-button}>
           Signup
         </button>
-        {errors && <p className="signup-error">{errors}</p>}
+        {errors && <p className={styles.login-error}>{errors}</p>}
     </form>
 </div>
 

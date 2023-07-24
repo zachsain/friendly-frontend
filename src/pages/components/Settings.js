@@ -32,16 +32,12 @@ function Settings() {
           });
     }   
 
-    function handleClick(e){
-        console.log('btn click')
-    }
-
   return (
-    <div className="settings-container">
+    <div className={styles.settings-container}>
         <button>
            
             <IconButton onClick={handleLogout}>
-            <LogoutIcon />
+              <LogoutIcon />
             </IconButton>
         </button>
     </div>

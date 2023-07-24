@@ -9,7 +9,7 @@ function Login({ setUser, setChatPageRender, setIsLoggedIn, setIsOnUserProfile, 
     const [password, setPassword] = useState("")
 
   return (
-    <div className="login">
+    <div className={styles.login}>
         {loginOrSignup ? 
             ( 
             <div>

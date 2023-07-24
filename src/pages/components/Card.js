@@ -6,9 +6,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import SwipeButtons from './SwipeButtons';
 import { Link } from 'react-router-dom'
 import styles from './Card.modules.css'
-// import styles from './Card.module.css'
-// import './DisplayCard.css';
-// import './SwipeButtons.css'
 import {InfinitySpin, Rings} from 'react-loader-spinner';
 
 
@@ -102,26 +99,26 @@ function Card() {
   }
  
   return (
-    <div className="tinderCards__cardContainer">     
+    <div className={styles.tinderCards__cardContainer}> 
       {profiles.map((p) => (
         <TinderCard
-          className="swipe"
+          className={styles.swipe}
           key={p.id}
           preventSwipe={['up', 'down']}
           ref={tinderCardRef}
           onCardLeftScreen={() => handleCardLeftScreen(p.user_id)}
         >
-          <div className="tinder--cards">
+          <div className={styles.tinder__cards}>
           <Link to={`/profile/${p.id}`}>
-            <div className="tinder--card">
-              <div className="displayCard">
-                <div className="displayCard__image-container">
+            <div className={styles.tinder__card}>
+              <div className={styles.displayCard}>
+                <div className={styles.displayCard__image-container}>
                   <img 
-                    className='tinder--card-img'
+                    className={styles.tinder__card_img}
                     src={p.featured_image.url} 
                     alt="profile-photo" 
                   />
-                  <h1 className="dislpayCard__h1">
+                  <h1 className={styles.dislpayCard__h1}>
                     {p.first_name} 
                   </h1>
                 </div>
@@ -130,7 +127,7 @@ function Card() {
             </Link>
           </div>
         
-          <div className="swipeButtons-conatiner">
+          <div className={styles.swipeButtons-conatiner}>
             <SwipeButtons
               onSwipeLeft={() => handleSwipeLeft(p.user_id)}
               onSwipeRight={() => handleSwipeRight(p.user_id)}
@@ -142,11 +139,11 @@ function Card() {
       ))}   
 
       {numberOfSwipes === 0 && (
-        <div className="tinder--cards">
-          <div className="tinder--card">
-            <div className="loading-spinner-container">
-              <div className="loading-spinner">
-              <h3 className="loading-spinner-h1">Thanks for joining Friendly</h3>
+        <div className={styles.tinder__cards}>
+          <div className={styles.tinder__card}>
+            <div className={styles.loading-spinner-container}>
+              <div className={styles.loading-spinner}>
+              <h3 className={styles.loading-spinner-h1}>Thanks for joining Friendly</h3>
                 <div>
                   <Rings
                     height="300"
@@ -160,7 +157,7 @@ function Card() {
                     speed={.05}
                   />
                 </div>
-                <h2 className="loading-spinner-h1">we're looking for more people...</h2>
+                <h2 className={styles.loading-spinner-h1}>we're looking for more people...</h2>
               </div>
             </div>
           </div>

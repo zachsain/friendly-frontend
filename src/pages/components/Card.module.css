@@ -84,7 +84,7 @@
   opacity: 1;
 }
 
-.tinder--cards{
+.tinder__cards{
   flex-grow: 1;
   padding-top: 40px;
   text-align: center;
@@ -94,7 +94,7 @@
   z-index: 1;
 }
 
-.tinder--status i {
+.tinder__status i {
   font-size: 100px;
   opacity: 0;
   transform: scale(0.3);
@@ -104,7 +104,7 @@
   margin-left: -50px;
 }
 
-.tinder--card {
+.tinder__card {
   width: 400px;
   height: 500px;
   background-color: #fff;
@@ -123,18 +123,18 @@
   transition: box-shadow 0.3s ease;
 }
 
-.moving.tinder--card {
+.moving.tinder__card {
   transition: none;
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing;
 }
 
-.tinder--card:hover {
+.tinder__card:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.tinder--card .displayCard__image-container {
+.tinder__card .displayCard__image-container {
   position: relative;
   width: 400px;
   height: 460px;
@@ -142,7 +142,7 @@
 }
 
 
-.tinder--card .tinder--card-img {
+.tinder__card .tinder__card_img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -155,7 +155,7 @@
   
 }
 
-.tinder--card .dislpayCard__h1 {
+.tinder__card .dislpayCard__h1 {
   position: absolute;
   bottom: 25px;
   left: 20%;

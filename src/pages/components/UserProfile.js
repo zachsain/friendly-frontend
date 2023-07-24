@@ -6,7 +6,7 @@ import { IconButton } from '@mui/material';
 import Modal from 'react-modal';
 import ProfileEditForm from './ProfileEditForm';
 import Settings from './Settings';
-import styles from './Settings.modules.css'
+// import styles from './Settings.modules.css'
 import styles from './UserProfile.modules.css'
 
 
@@ -40,14 +40,14 @@ function UserProfile() {
     }
     return (
       <div>
-        <div onClick={handleEditClick} className="userProfile">
-        <div className="userProfile__image-container">
-          <img className="userProfile__image" src={user.profile.featured_image.url} alt="profile-photo" />
-          <h1 className="userProfile__h1">{user.profile.first_name}, {age}</h1>
+        <div onClick={handleEditClick} className={styles.userProfile}>
+        <div className={styles.userProfile__image-container}>
+          <img className={styles.userProfile__image} src={user.profile.featured_image.url} alt="profile-photo" />
+          <h1 className={styles.userProfile__h1}>{user.profile.first_name}, {age}</h1>
         </div>
-        <p className="userProfile__p">{user.profile.bio}</p>
+        <p className={styles.userProfile__p}>{user.profile.bio}</p>
         </div>
-        <Modal className='edit'  isOpen={isEditFormVisible} onRequestClose={handleEditClick} appElement={document.getElementById('root')}>
+        <Modal className={styles.edit}  isOpen={isEditFormVisible} onRequestClose={handleEditClick} appElement={document.getElementById('root')}>
           <ProfileEditForm
             setIsEditFormVisible={setIsEditFormVisible}
             fn={user.profile.first_name}
@@ -57,7 +57,7 @@ function UserProfile() {
           />
         </Modal>
         <div >
-        <Modal className='show-settings' isOpen={showLogout} onRequestClose={handleLogoutModal} appElement={document.getElementById('root')}>
+        <Modal className={styles.show__settings} isOpen={showLogout} onRequestClose={handleLogoutModal} appElement={document.getElementById('root')}>
           <Settings/>
         </Modal>
         </div>

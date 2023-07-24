@@ -11,7 +11,7 @@ import AppContext from './AppContext';
 import ProfilePage from './ProfilePage';
 import {InfinitySpin} from 'react-loader-spinner';
 
-function App() {
+function Home() {
   const [user, setUser] = useState(null)
   const [matches, setMatches] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -60,27 +60,32 @@ function App() {
   console.log(user)
   console.log(matches)
 
-  // if (!isLoaded) {
-  //   return (
-  //     <div className="loading-spinner">
-  //      <InfinitySpin 
-  //       width='200'
-  //       color="#4fa94d"
-  //     />
-  //     </div>
-  //   );
-  // }
+  if (!isLoaded) {
+    return (
+      <div className="loading-spinner">
+       <InfinitySpin 
+        width='200'
+        color="#4fa94d"
+      />
+      </div>
+    );
+  }
 
-  // if (!user) return (
-  //   <div>
-  //       <Login setShowLogout={setShowLogout} setIsOnUserProfile={setIsOnUserProfile} setIsLoggedIn={setIsLoggedIn} setChatPageRender={setChatPageRender} setUser={setUser} />
-  //   </div>)
+  if (!user) return (
+    <div>
+        <Login 
+          setShowLogout={setShowLogout} 
+          setIsOnUserProfile={setIsOnUserProfile} 
+          setIsLoggedIn={setIsLoggedIn} 
+          setChatPageRender={setChatPageRender} 
+          setUser={setUser} 
+        />
+    </div>)
 
   
   return (
-    <div className="App">
-      hi 
-    {/* <BrowserRouter>
+    <div>
+    <BrowserRouter>
     <AppContext.Provider 
       value={{
         user, 
@@ -95,8 +100,8 @@ function App() {
         setIsOnUserProfile,
         showLogout,
         setShowLogout
-      }}> */}
-    {/* <Header /> 
+      }}> 
+     <Header /> 
       <Switch>
       <Route path = "/chat/:id">
           <ChatScreen />
@@ -121,11 +126,11 @@ function App() {
           </Route>
       </Switch>
       </AppContext.Provider>
-      </BrowserRouter> */}
+      </BrowserRouter> 
     </div>
   );
 }
 
 
-export default App;
+export default Home;
 

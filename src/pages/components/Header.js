@@ -46,15 +46,15 @@ function Header( ) {
   unreadMessages = unopenedMatchesCount + unopenedMessagesCount
 
   return (
-    <div className="header">
+    <div className={styles.header}>
       {isOnUserProfile ? (
         <IconButton>
-         <SettingsIcon onClick={() => setShowLogout(true)} className="header__icon" fontSize='large'/>
+         <SettingsIcon onClick={() => setShowLogout(true)} className={styles.header__icon} fontSize='large'/>
         </IconButton>
       ) : (
         <Link to="/userprofile">
           <IconButton> 
-            <Person2Icon className="header__icon" fontSize="large"/>
+            <Person2Icon className={styles.header__icon} fontSize="large"/>
           </IconButton>
         </Link>
       )}
@@ -70,7 +70,7 @@ function Header( ) {
 
         <Link to="/">
           <img 
-              className="header__logo"
+              className={styles.header__logo}
               src="https://i.imgur.com/8H6MxYS.png"
               // src="https://www.canva.com/design/DAFkhcTlSoU/UXZyJ7Cpy0cDVjYYAUf3_Q/view?utm_content=DAFkhcTlSoU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" 
               alt="tinder-logo"
@@ -84,9 +84,10 @@ function Header( ) {
               badgeContent={unreadMessages}
               color="error"
               classes={{ badge: 'custom-badge' }}
+              // classes={{ badge: {styles.custom-badge} }}
             >
               <ForumIcon
-                className="header__icon"
+                className={styles.header__icon}
                 fontSize="large"
                 onClick={() => setIsOnUserProfile(false)}
               />

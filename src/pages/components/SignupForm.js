@@ -71,60 +71,61 @@ function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfi
   }
  
   return (
-    <div className="signup-container">
-      <form className="signup-form" >
-        <h2 className="signup-heading">Sign up</h2>
+    <div className={styles.signup-container}>
+      <form className={styles.signup-form} >
+        <h2 className={styles.signup-heading}>Sign up</h2>
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(event) => setUsername(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
         <input
           type="text"
           placeholder="First Name"
           value={firstName}
           onChange={(event) => setFirstName(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
         <input
           type="text"
           placeholder="Last Name"
           value={lastName}
           onChange={(event) => setLastName(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
           <input
           type="bio"
           placeholder="Bio"
           value={bio}
           onChange={(event) => setBio(event.target.value)}
-          className="signup-input"
+          className={styles.signup-input}
         />
         <label htmlFor="gender">Gender:</label>
-          <select id="gender" name="gender" value={gender} onChange={handleGenderChange}>
+        {/* id question? */}
+          <select id="gender" name="gender" value={gender} onChange={handleGenderChange}> 
           <option value="">Select Gender</option>
           {genderOptions.map((option) => (
             <option key={option} value={option}>{option}</option>
           ))}
         </select>
-        <div className="dob">
-          <label className='dob-label' htmlFor="dob">DOB:</label>
+        <div className={styles.dob}>
+          <label className={styles.dob-label} htmlFor="dob">DOB:</label>
               <DatePicker
               id="dob"
               selected={dob}
@@ -136,16 +137,16 @@ function SignupForm({ setUser, setLoginOrSignup, setIsLoggedIn, setIsOnUserProfi
               />
         </div>
 
-        <input className="image-field" type="file" accept="image/*" multiple={false} onChange={onImageChange} />
+        <input className={styles.image-field} type="file" accept="image/*" multiple={false} onChange={onImageChange} />
 
-        <button type="submit" className="signup-button" onClick={handleSignup}>
+        <button type="submit" className={styles.signup-button} onClick={handleSignup}>
           Sign up
         </button>
         <h4>Already have an account?</h4>
-        <button onClick={() => setLoginOrSignup(true)} type="submit" className="signup-button">
+        <button onClick={() => setLoginOrSignup(true)} type="submit" className={styles.signup-button}>
           Login
         </button>
-        {errors && <p className="signup-error">{errors}</p>}
+        {errors && <p className={styles.signup-error}>{errors}</p>}
       </form>
     </div>
   );
